@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="For creating my Portfolio">
+    <title>Sharful's Personal Portfolio</title>
+
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            width: 2000px;
+            margin: 0 auto;
+        } */
+
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid gray;
+            border-collapse: collapse;
+            padding: 10px;
+            /* margin: 0 auto; */
+        }
+
+        table tr:nth-child(2n) {
+            background-color: rgb(13, 111, 47);
+            color: white;
+        }
+
+        table tr:nth-child(2n+1) {
+            background-color: rgb(34, 29, 29);
+            color: white;
+        }
+
+        table th {
+            text-align: center;
+        }
+
+        /* table tr:hover {
+            background-color: #eee;
+            color: black;
+
+        } */
+
+        #technology_option {
+            background-color: rgb(34, 29, 29);
+            color: white;
+            border: none;
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        #skill_option {
+            background-color: rgb(34, 29, 29);
+            color: white;
+            border: none;
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        #progress_option {
+            background-color: rgb(34, 29, 29);
+            color: white;
+            border: none;
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        form fieldset {
+            background-color: #eee;
+        }
+
+        details[open]>summary {
+            background-color: aqua;
+        }
+
+        .strong_text {
+            text-align: center;
+        }
+
+        .link_url a:hover {
+            color: black;
+        }
+
+        .link_url a:focus {
+            background-color: green;
+            color: white;
+        }
+
+        .biograph::before {
+            content: '';
+            width: 1%;
+            height: 10px;
+            background-color: black;
+            display: inline-block;
+            border-radius: 100%;
+        }
+
+        #name:focus {
+            background-color: coral;
+            width: 25%;
+            color: white;
+            padding: 10px;
+        }
+
+        #email:focus {
+            background-color: coral;
+            width: 25%;
+            ;
+            color: white;
+            padding: 10px;
+        }
+
+        button {
+            padding: 5px;
+            /* margin:auto; */
+            border: none;
+            background-color: green;
+            color: white;
+        }
+
+        button:hover {
+            background-color: gray;
+            color: white;
+            width: 20%;
+            height: 100%;
+        }
+
+        #occupation {
+            padding: 5px;
+            border: none;
+        }
+
+        #message:focus {
+            background-color: coral;
+            width: 50%;
+            ;
+            color: white;
+            border: none;
+            padding: 10px;
+        }
+
+        .card1 {
+            float: right;
+            box-sizing: border-box;
+            box-shadow: 2px 2px 2px 2px gray;
+            width: 47%;
+            padding: 10px;
+            /* display: inline-block; */
+            height: 200px;
+        }
+
+        .card1:hover {
+            background-color: #0075FF;
+            color: white;
+            font-size: 1.5rem;
+
+        }
+
+        .card2 {
+            float: left;
+            box-sizing: border-box;
+            box-shadow: 2px 2px 2px 2px gray;
+            width: 47%;
+            padding: 10px;
+            /* margin-top: 10px; */
+            /* margin-bottom: 5px; */
+            /* display: inline-block; */
+            height: 200px;
+        }
+
+        .card2:hover {
+            background-color: #0075FF;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .clear-div {
+            clear: both;
+        }
+
+        .nav_menu {
+            background-color: #424242;
+            position: fixed;
+            /* Set the navbar to fixed position */
+            top: 0;
+            /* bottom: 0; */
+            /* Position the navbar at the bottom of the page */
+            width: 100%;
+            font-weight: bold;
+            opacity: 0.5;
+        }
+
+        .nav_menu:hover {
+            opacity: 1;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            text-align: right;
+        }
+
+        nav ul li {
+            display: inline-block;
+            padding: 20px 20px;
+        }
+
+        nav ul li:hover {
+            background-color: #333;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: #F7A400;
+        }
+
+        nav {
+            margin-bottom: 100px;
+        }
+
+        .card2 ol li:first-of-type:hover {
+            background-color: #F3AC95;
+            color: white;
+            border-radius: 5%;
+            padding: 10px;
+        }
+
+        .card1 ul li:first-of-type:hover {
+            background-color: #F3AC95;
+            color: white;
+            border-radius: 5%;
+            padding: 10px;
+        }
+
+        /* .footer p::first-letter{
+            font-size: 1.5rem;
+        } */
+
+        #summary p::selection {
+            color: white;
+            background-color: black;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: rgb(52, 52, 103);
+        }
+
+        header {
+            background-image: url("images/background.jpg");
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-attachment: fixed;
+        }
+
+        .iframe {
+            margin: 0 auto;
+        }
+
+        #summary {
+            margin-bottom: 20px;
+        }
+
+        .clear-div {
+            clear: both;
+        }
+
+        hr {
+            margin: 20px auto;
+        }
+
+        .footer {
+            background-color: #181818;
+            text-align: center;
+            color: white;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .footer p {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<!-- 42:50 -->
+
+<body>
+
+    <div class="container">
+        <!-- Header section starts here -->
+        <header>
+
+            <!-- Navigation Bar start -->
+            <nav>
+                <ul class="nav_menu">
+                    <li>
+                        <a href="http://127.0.0.1:5500/index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#summary">About Me</a>
+                    </li>
+                    <li>
+                        <a href="">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Navigation Bar End -->
+
+
+            <h1 class="name_heading" style="text-align:center;">Sharful Amin</h1>
+            <img style="display:block;margin-left:auto;margin-right:auto;width:250px;height:200px;margin-bottom:0px;"
+                src="./images/Sharful_Amin.png" alt="Profile Image">
+            <br>
+            <p class="strong_text"><strong>Jr. Software Developer</strong></p>
+            <p class="link_url" style="text-align:center;">
+                <a href="https://www.amarcourse.com/" target="_blank">Learning Website</a>
+                <a href="https://github.com/Amin-Uchchash897" target="_blank">Github Profile</a>
+                <a href="https://www.linkedin.com/in/sharful-amin-2098b220a/" target="_blank">linkedin</a>
+                <a href="https://gitlab.com/sharful_amin" target="_blank">Gitlab Profile</a>
+                <a href="tel:+8801752133348" target="_blank">Gitlab Profile</a>
+                <a href="tel:+8801752133348" target="_blank">Phone</a>
+                <a href="mailto:uchchash926@gmail.com" target="_blank">Email</a>
+            </p>
+            <hr />
+
+        </header>
+        <!-- Header section ends here -->
+
+        <div class="clear-div"></div>
+
+        <main>
+
+            <!-- Summary section starts here -->
+            <section id="summary">
+                <details>
+                    <summary>
+                        <strong><em>Summary</em></strong>
+                        <!-- <h2><strong><em>Summary</em></strong></h2> -->
+                    </summary>
+                    <p class="biograph" style="text-align:justify;font-variant:normal;font-size:normal;">
+                        I am Sharful Amin Uchchash. I have completed my graduation from Eastern University in the
+                        Department
+                        of
+                        Computer
+                        Science and Engineering. After completing my graduation, I’ve done a Government approved course
+                        which
+                        was
+                        organized by Finance Ministry in Bangladesh. That was about- PHP With Laravel Framework. Last 1
+                        year
+                        I
+                        have
+                        completely worked on Web Designing and Development. I am experienced with HTML5, CSS3,
+                        Bootstrap,
+                        JavaScript,
+                        PHP, Laravel, and Microsoft Office applications. I am passionate about my work. Because I love
+                        what
+                        I
+                        do.
+                        Besides, I am regularly habituated to using Microsoft Office applications, Google sheets,
+                        Dropbox,
+                        zoom,
+                        etc. I
+                        believe that I have good communication skills. My English proficiency is very good. I can
+                        communicate
+                        with
+                        native English-Speaking clients. I am very punctual and want to do all my work at the right
+                        time. I
+                        am
+                        ambitious
+                        and driven. I thrive on challenges and constantly set goals for myself, so I have something to
+                        strive
+                        forward.
+                        If I get a better opportunity I want to prove myself through my dedication, knowledge, and hard
+                        work. I
+                        have
+                        ambitions to achieve financial freedom. In five years, I hope to establish myself as a
+                        successful
+                        Entrepreneur
+                        and also a Leader in my own company. That is my final and also desirable destination.
+                    </p>
+                </details>
+            </section>
+            <!-- Summary section ends here -->
+            <div class="clear-div"></div>
+            <!-- Employment History section starts here -->
+            <section id="employment_history">
+                <div class="card2">
+                    <card-body>
+                        <h2><strong><em>Employment History</em></strong></h2>
+                        <ol>
+                            <li>
+                                <b>Junior Web Developer at Pondit</b>
+                                <span>| DEC 2021 - JAN 2022</span>
+                                <p>Working on PHP and Laravel framework.</p>
+                            </li>
+                        </ol>
+                    </card-body>
+                </div>
+            </section>
+            <!-- Employment History section starts here -->
+
+            <!-- Education section starts here -->
+            <section id="education_details">
+                <div class="card1">
+                    <card-body>
+                        <h2><strong><em>Education</em></strong></h2>
+                        <ul>
+                            <li>
+                                <strong>B.Sc. in CSE</strong>
+                                <p>Eastern University, Dhaka, Bangladesh</p>
+                                <p>Grading pint: 3.17/4.00</p>
+                            </li>
+                        </ul>
+                    </card-body>
+                </div>
+            </section>
+            <!-- Education section ends here -->
+
+            <!-- Div Clearation starts -->
+            <div class="clear-div">
+
+            </div>
+            <!-- Div Clearation end -->
+
+            <!-- Skill section starts here -->
+            <section id="skills">
+                <h2><strong><em>Skills</em></strong></h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                <select name="technology_option" id="technology_option">
+                                    <option value="technologies" selected>Technologies</option>
+                                    <option value="technologies">Software Skills</option>
+                                </select>
+                            </th>
+                            <th>
+                                <select name="skill_option" id="skill_option">
+                                    <option value="skill" selected>Skill Level</option>
+                                    <option value="skill">Progression Rate</option>
+                                </select>
+                            </th>
+                            <th>
+                                <select name="progress_option" id="progress_option">
+                                    <option value="progress" selected>Progress Level</option>
+                                    <option value="progress">Stage of Progression</option>
+                                </select>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>HTML</td>
+                            <td>★★★★☆</td>
+                            <td><progress min="0" max="100" value="80"></progress></td>
+                        </tr>
+                        <tr>
+                            <td>CSS</td>
+                            <td>★★★☆☆</td>
+                            <td><progress min="0" max="100" value="60"></progress></td>
+                        </tr>
+                        <tr>
+                            <td>Bootstrap</td>
+                            <td>★★★☆☆</td>
+                            <td><progress min="0" max="100" value="50"></progress></td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td>
+                            <td>★☆☆☆☆</td>
+                            <td><progress min="0" max="100" value="10"></progress></td>
+                        </tr>
+                        <tr>
+                            <td>PHP</td>
+                            <td>★★☆☆☆</td>
+                            <td><progress min="0" max="100" value="40"></progress></td>
+                        </tr>
+                        <tr>
+                            <td>MySQL</td>
+                            <td>★★☆☆☆</td>
+                            <td><progress min="0" max="100" value="40"></progress></td>
+                        </tr>
+                        <tr>
+                            <td>Laravel</td>
+                            <td>★☆☆☆☆</td>
+                            <td><progress min="0" max="100" value="20"></progress></td>
+                        </tr>
+                        <tr>
+                            <td>Microsoft Office</td>
+                            <td>★★★★☆</td>
+                            <td><progress min="0" max="100" value="80"></progress></td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+
+                    </tfoot>
+                </table>
+            </section>
+            <!-- Skill section ends here -->
+
+            <!-- Contact section starts here -->
+            <section id="contact">
+                <h2><strong><em>Contact Me</em></strong></h2>
+
+                <form action="" method="">
+                    <fieldset style="width:50%;padding:10px;">
+                        <div>
+                            <label for="name">Name : </label>
+                            <input type="text" id="name" placeholder="type your name" required>
+                        </div>
+                        <br>
+
+                        <div>
+                            <label for="email">Email : </label>
+                            <input type="email" id="email" placeholder="type your email" required>
+                        </div>
+                        <br>
+
+                        <div>
+                            <span>Gender : </span>
+                            <input type="radio" name="gender" id="male">
+                            <label for="male">Male</label>
+
+                            <input type="radio" name="gender" id="female">
+                            <label for="female">Female</label>
+                        </div>
+                        <br>
+
+                        <div>
+                            <label for="occupation">Occupation : </label>
+                            <select name="" id="occupation">
+                                <option value="student">Student</option>
+                                <option value="teacher">Teacher</option>
+                                <option value="others">Others</option>
+                            </select>
+                        </div>
+                        <br>
+
+                        <div>
+                            <label for="message">Message</label><br>
+                            <textarea style="margin-top:10px;" name="" id="message" cols="30" rows="10"
+                                placeholder="write message"></textarea>
+                        </div>
+
+                        <div class="button">
+                            <button type="submit" style="margin-top:10px;">Send Message</button>
+                        </div>
+                    </fieldset>
+                </form>
+
+                <br><br>
+                <div class="iframe">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.868645528843!2d90.40751001445788!3d23.858797690544776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c5a00508986d%3A0xf4846703e72586eb!2sMunshi%20Market!5e0!3m2!1sen!2sbd!4v1668001875452!5m2!1sen!2sbd"
+                        width="560" height="315" title="address map" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6W8R4uxU8kk"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </section>
+            <!-- Contact secton ends here -->
+        </main>
+
+        <!-- Footer section starts here -->
+        <footer class="footer">
+            <p>Developed with 💓 by Sharful Amin.</p>
+            <p>Copyright &copy; 2022</p>
+        </footer>
+        <!-- Footer section starts here -->
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible_Table</title>
+
+    <style>
+        table{
+            margin:auto;
+        }
+
+        th,td {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+        <table border="1px" style="border-collapse:collapse;text-align: center;">
+
+            <caption style="margin-bottom:10px;">
+                <u>Students Info</u>
+            </caption>
+
+            <colgroup>
+                    <col span="3" style="background-color: burlywood"/>
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">GPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">101</th>
+                    <td>Anis</td>
+                    <td>3.42</td>
+                </tr>
+                <tr>
+                    <th scope="row">102</th>
+                    <td>Rayhan</td>
+                    <td>3.45</td>
+                </tr>
+            </tbody>
+        </table>
+</body>
+
+</html>
